@@ -41,9 +41,21 @@ st.markdown(
         padding:20px 18px 22px 18px; box-shadow:0 8px 22px rgba(0,0,0,.07);
         transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
         aspect-ratio: 3 / 2; text-align:center; margin-bottom: 0.8rem; overflow:hidden;
+        position: relative; /* 🔹 배지 절대배치용 (레이아웃 영향 없음) */
       }}
       a.agent-card:hover {{ transform:translateY(-2px); box-shadow:0 14px 28px rgba(0,0,0,.10); border-color:rgba(0,0,0,.10); }}
       a.agent-card:active {{ transform:translateY(0); }}
+
+      /* 상태 배지 (우측 상단, 레이아웃 비영향) */
+      .status-badge {{
+        position:absolute; top:8px; right:10px;
+        font-size:12px; line-height:1; padding:6px 8px;
+        background: rgba(255,255,255,0.92);
+        border:1px solid rgba(0,0,0,.06); border-radius:10px;
+        box-shadow:0 2px 6px rgba(0,0,0,.06);
+        pointer-events:none; user-select:none;
+        white-space:nowrap;
+      }}
 
       /* 아이콘 컨테이너/이모지 크기 ↑ (반응형 clamp로 폭에 맞춰 자연스레 커지도록) */
       .ic-wrap {{
@@ -85,9 +97,13 @@ def render_agent_card(agent: dict, idx: int):
     pending_bg = "rgba(243,244,246,1)"  # gray-100
     card_bg = pending_bg if pending else CARD_BG
 
+    # 상태 배지 텍스트 (레이아웃 비영향, 우측 상단 고정)
+    status_text = "🟡 In Development" if pending else "🟢 Available"
+
     st.markdown(
         f"""
         <a class="agent-card" href="{agent.get('url','#')}" target="_blank" rel="noopener noreferrer" style="background:{card_bg};">
+            <div class="status-badge">{status_text}</div>
             <div class="ic-wrap" style="background:{agent.get('color','#111827')};">{agent.get('emoji','🤖')}</div>
             <div class="agent-title">{agent.get('name','Agent')}</div>
             <div class="agent-desc">{agent.get('desc','설명 준비중입니다.')}</div>
@@ -107,4 +123,3 @@ for _ in range(rows):
         i += 1
 
 st.markdown("<div style='opacity:.55; font-size:12.5px; margin-top:.6rem;'>© 2025 디마 Agents · All Agents Portal</div>", unsafe_allow_html=True)
-
