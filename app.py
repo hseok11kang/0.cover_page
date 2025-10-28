@@ -1,4 +1,4 @@
-# 0_cover_page.py (헤더 색상만 변경된 버전)
+# 0_cover_page.py (타이포·아이콘·카드 사이즈 증대 버전)
 import math
 import streamlit as st
 
@@ -16,35 +16,45 @@ C3 = "#EC4899"   # pink-500
 CARD_BG = "rgba(255,255,255,1)"
 BORDER = "rgba(0,0,0,.06)"
 
+# ⬇️ 폰트/아이콘/카드 전반 크기를 키움 (웹 확대 없이도 보기 좋게)
 st.markdown(
     f"""
     <style>
       .block-container {{ padding-top: 1rem !important; padding-bottom: 1.25rem !important; text-align: center; }}
+
+      /* 헤더 타이틀/서브타이틀 조금 더 큼 */
       h1.hero-title {{
-        font-weight: 900; font-size: clamp(28px, 5.4vw, 60px); line-height: 1.04; margin: 0 0 .2rem 0;
+        font-weight: 900; font-size: clamp(36px, 6.2vw, 72px); line-height: 1.04; margin: 0 0 .25rem 0;
         background: linear-gradient(90deg, {C1} 0%, {C2} 52%, {C3} 100%);
         -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;
       }}
-      p.hero-sub {{ font-size: clamp(14px, 1.9vw, 18px); opacity: .85; margin: .2rem 0 .8rem 0; }}
-      .divider-min {{ font-size:22px; opacity:.55; margin:.2rem 0 1rem 0; }}
+      p.hero-sub {{ font-size: clamp(16px, 2.1vw, 22px); opacity: .85; margin: .25rem 0 1.0rem 0; }}
+      .divider-min {{ font-size:24px; opacity:.55; margin:.2rem 0 1rem 0; }}
 
-      .st-emotion-cache-ocqkz7, .st-emotion-cache-1vbkxwb {{ gap: 0.6rem !important; }}
+      .st-emotion-cache-ocqkz7, .st-emotion-cache-1vbkxwb {{ gap: 0.7rem !important; }}
 
+      /* 카드 자체를 조금 더 큼 + 여백 확대 */
       a.agent-card {{
         display:flex; flex-direction:column; align-items:center; justify-content:center;
         text-decoration:none !important; color:inherit !important;
-        background:{CARD_BG}; border:1px solid {BORDER}; border-radius:14px;
-        padding:14px 14px 16px 14px; box-shadow:0 6px 18px rgba(0,0,0,.06);
+        background:{CARD_BG}; border:1px solid {BORDER}; border-radius:16px;
+        padding:20px 18px 22px 18px; box-shadow:0 8px 22px rgba(0,0,0,.07);
         transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
-        aspect-ratio: 3 / 2; text-align:center; margin-bottom: 0.6rem; overflow:hidden;
+        aspect-ratio: 3 / 2; text-align:center; margin-bottom: 0.8rem; overflow:hidden;
       }}
-      a.agent-card:hover {{ transform:translateY(-1px); box-shadow:0 10px 22px rgba(0,0,0,.08); border-color:rgba(0,0,0,.10); }}
+      a.agent-card:hover {{ transform:translateY(-2px); box-shadow:0 14px 28px rgba(0,0,0,.10); border-color:rgba(0,0,0,.10); }}
       a.agent-card:active {{ transform:translateY(0); }}
 
-      .ic-wrap {{ width:38px; height:38px; border-radius:10px; display:flex; align-items:center; justify-content:center;
-                 font-size:20px; color:white; margin:0 auto 4px auto; }}
-      .agent-title {{ font-weight:800; font-size:15px; margin:6px 0 10px 0; }}
-      .agent-desc  {{ font-size:12.5px; opacity:.80; min-height:34px; }}
+      /* 아이콘 컨테이너/이모지 크기 ↑ (반응형 clamp로 폭에 맞춰 자연스레 커지도록) */
+      .ic-wrap {{
+        width:clamp(48px, 5.2vw, 64px); height:clamp(48px, 5.2vw, 64px);
+        border-radius:14px; display:flex; align-items:center; justify-content:center;
+        font-size:clamp(24px, 3.2vw, 34px); color:white; margin:0 auto 8px auto;
+      }}
+
+      /* 제목/설명 폰트 확대 */
+      .agent-title {{ font-weight:800; font-size:clamp(17px, 1.6vw, 20px); margin:8px 0 12px 0; line-height:1.1; }}
+      .agent-desc  {{ font-size:clamp(14px, 1.25vw, 15.5px); opacity:.85; min-height:40px; line-height:1.45; }}
     </style>
     """,
     unsafe_allow_html=True,
