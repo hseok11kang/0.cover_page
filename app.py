@@ -82,9 +82,9 @@ AGENTS = [
     {"name": "Product Visual Optimizer","emoji":"📸",  "color": "#2563EB", "desc": "Agent가 제품 Key Visual 이미지를 마케팅/광고 목적에 맞게 수정/변경합니다.","url": "https://7appuctkvgenerator-ytyxho7ywsmfdi93erhifr.streamlit.app/"},
     {"name": "Market Researcher","emoji":"🌏", "color": "#22C55E", "desc": "Agent가 국내/외 다양한 카테고리의 시장조사를 수행합니다", "url": "https://market-research-service-644231591371.asia-northeast3.run.app/"},
     {"name": "YouTube Analyzer","emoji":"🎞️", "color": "#F43F5E", "desc": "Agent가 자/타사 YouTube 채널의 커뮤니케이션 방향성과 퍼포먼스를 조사합니다.", "url": "#"},
-    {"name": "Agent10", "emoji": "💬", "color": "#6366F1", "desc": "준비중입니다.", "url": "#"},
-    {"name": "Agent11", "emoji": "💬", "color": "#0EA5E9", "desc": "준비중입니다.", "url": "#"},
-    {"name": "Agent12", "emoji": "💬", "color": "#FB923C", "desc": "준비중입니다.", "url": "#"},
+    {"name": "Agent10",  "color": "#6366F1", "desc": "준비중입니다.", "url": "#"},
+    {"name": "Agent11",  "color": "#0EA5E9", "desc": "준비중입니다.", "url": "#"},
+    {"name": "Agent12",  "color": "#FB923C", "desc": "준비중입니다.", "url": "#"},
 ]
 
 st.markdown('<h1 class="hero-title">Introducing our AI Agents</h1>', unsafe_allow_html=True)
@@ -123,5 +123,6 @@ for _ in range(rows):
         i += 1
 
 st.markdown("<div style='opacity:.55; font-size:12.5px; margin-top:.6rem;'>© 2025 디마 Agents · All Agents Portal</div>", unsafe_allow_html=True)
+
 
 
