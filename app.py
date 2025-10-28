@@ -76,7 +76,7 @@ AGENTS = [
 ]
 
 st.markdown('<h1 class="hero-title">Introducing our AI Agents</h1>', unsafe_allow_html=True)
-st.markdown('<p class="hero-sub">Digital Marketing 특화 AI Agents를 활용해보세요!</p>', unsafe_allow_html=True)
+st.markdown('<p class="hero-sub">Your AI Marketing Stack — 마케터의 하루를 자동화하는 AI 에이전트 허브!</p>', unsafe_allow_html=True)
 st.markdown('<div style="height: 12px;"></div>', unsafe_allow_html=True)  # 카드 위 여백 한칸 추가
 
 def render_agent_card(agent: dict, idx: int):
@@ -107,3 +107,4 @@ for _ in range(rows):
         i += 1
 
 st.markdown("<div style='opacity:.55; font-size:12.5px; margin-top:.6rem;'>© 2025 디마 Agents · All Agents Portal</div>", unsafe_allow_html=True)
+
