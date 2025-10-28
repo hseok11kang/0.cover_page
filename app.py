@@ -98,7 +98,7 @@ def render_agent_card(agent: dict, idx: int):
     card_bg = pending_bg if pending else CARD_BG
 
     # 상태 배지 텍스트 (레이아웃 비영향, 우측 상단 고정)
-    status_text = "🟡 In Development" if pending else "🟢 Available"
+    status_text = "🔴 In Development" if pending else "🟢 Available"
 
     st.markdown(
         f"""
@@ -123,3 +123,4 @@ for _ in range(rows):
         i += 1
 
 st.markdown("<div style='opacity:.55; font-size:12.5px; margin-top:.6rem;'>© 2025 디마 Agents · All Agents Portal</div>", unsafe_allow_html=True)
+
