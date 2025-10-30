@@ -64,9 +64,10 @@ AGENTS = [
     {"name": "Social Analyzer",  "emoji": "📊", "color": "#14B8A6", "desc": "Sprinklr 연계를 기반으로 소셜리스닝 및 소셜마케팅 성과분석 대시보드를 제공합니다.", "url": "https://5socialanalyzer-peczsbixd46ewvvilrchfg.streamlit.app/"},
     {"name": "Creative Risk Auditor",  "emoji": "⚠️",  "color": "#EF4444", "desc": "Agent가 마케팅/광고에 사용될 소재의 정치/사회/문화/환경 측면 리스크를 진단합니다.", "url": "https://6creativeriskauditor-x9rtbb4ysbzednb3oc7pjs.streamlit.app/"},
     {"name": "Key Visual Editor","emoji":"📸",  "color": "#2563EB", "desc": "Agent가 제품 Key Visual 이미지를 마케팅/광고 목적에 맞게 수정/변경합니다.","url": "https://7appuctkvgenerator-ytyxho7ywsmfdi93erhifr.streamlit.app/"},
-    {"name": "Market Researcher","emoji":"🌏", "color": "#22C55E", "desc": "Agent가 국내/외 다양한 카테고리의 시장조사를 수행합니다.", "url": "https://market-research-service-644231591371.asia-northeast3.run.app/"},
-    {"name": "YouTube Analyzer","emoji":"🎞️", "color": "#F43F5E", "desc": "Agent가 자/타사 YouTube 채널의 커뮤니케이션 방향성과 퍼포먼스를 분석합니다.", "url": "https://yt-research-dashboard.vercel.app/"},
+    # ▼ 여기서 8번과 10번을 스위칭(8번=AI Copywriter, 10번=Market Researcher)
     {"name": "AI Copywriter", "emoji":"🪄", "color": "#6366F1", "desc": "Agent가 다양한 마케팅 목적별 카피라이팅 업무를 대행합니다.", "url": "https://9aicopywriter-ep59xexvnabdh2xxqweq5m.streamlit.app/"},
+    {"name": "YouTube Analyzer","emoji":"🎞️", "color": "#F43F5E", "desc": "Agent가 자/타사 YouTube 채널의 커뮤니케이션 방향성과 퍼포먼스를 분석합니다.", "url": "https://yt-research-dashboard.vercel.app/"},
+    {"name": "Market Researcher","emoji":"🌏", "color": "#22C55E", "desc": "Agent가 국내/외 다양한 카테고리의 시장조사를 수행합니다.", "url": "https://market-research-service-644231591371.asia-northeast3.run.app/"},
     {"name": "Agent11",  "color": "#0EA5E9", "desc": "준비중입니다.", "url": "#"},
     {"name": "Agent12",  "color": "#FB923C", "desc": "준비중입니다.", "url": "#"},
 ]
