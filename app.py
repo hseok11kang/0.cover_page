@@ -1,4 +1,4 @@
-# 0_cover_page.py (타이포·아이콘·카드 사이즈 증대 버전)
+# 0_cover_page.py (9·10번 카드 운영중 처리)
 import math
 import streamlit as st
 
@@ -9,10 +9,7 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-# ===== Title Gradient Colors (Blue → Violet → Pink) =====
-C1 = "#3B82F6"   # blue-500
-C2 = "#8B5CF6"   # violet-500
-C3 = "#EC4899"   # pink-500
+C1, C2, C3 = "#3B82F6", "#8B5CF6", "#EC4899"
 CARD_BG = "rgba(255,255,255,1)"
 BORDER = "rgba(0,0,0,.06)"
 
@@ -26,7 +23,6 @@ st.markdown(
         -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;
       }}
       p.hero-sub {{ font-size: clamp(16px, 2.1vw, 22px); opacity: .85; margin: .25rem 0 1.0rem 0; }}
-      .divider-min {{ font-size:24px; opacity:.55; margin:.2rem 0 1rem 0; }}
       .st-emotion-cache-ocqkz7, .st-emotion-cache-1vbkxwb {{ gap: 0.7rem !important; }}
 
       a.agent-card {{
@@ -39,7 +35,6 @@ st.markdown(
         position: relative;
       }}
       a.agent-card:hover {{ transform:translateY(-2px); box-shadow:0 14px 28px rgba(0,0,0,.10); border-color:rgba(0,0,0,.10); }}
-      a.agent-card:active {{ transform:translateY(0); }}
 
       .status-badge {{
         position:absolute; top:8px; right:10px;
@@ -81,10 +76,14 @@ st.markdown('<p class="hero-sub">Your AI Marketing Stack — 마케터의 하루
 st.markdown('<div style="height: 12px;"></div>', unsafe_allow_html=True)
 
 def render_agent_card(agent: dict, idx: int):
-    pending = 8 <= (idx + 1) <= 12
-    pending_bg = "rgba(243,244,246,1)"  # gray-100
-    card_bg = pending_bg if pending else CARD_BG
+    # 1-index 기준: 8, 11, 12만 개발중(회색). 9, 10은 운영중(흰색 + 🟢 Available).
+    one_based = idx + 1
+    pending_ids = {8, 11, 12}
+    pending = one_based in pending_ids
+
+    card_bg = "rgba(243,244,246,1)" if pending else CARD_BG  # gray-100 or white
     status_text = "🔴 In Development" if pending else "🟢 Available"
+
     st.markdown(
         f"""
         <a class="agent-card" href="{agent.get('url','#')}" target="_blank" rel="noopener noreferrer" style="background:{card_bg};">
