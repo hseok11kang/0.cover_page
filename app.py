@@ -64,7 +64,6 @@ AGENTS = [
     {"name": "Social Analyzer",  "emoji": "📊", "color": "#14B8A6", "desc": "Sprinklr 연계를 기반으로 소셜리스닝 및 소셜마케팅 성과분석 대시보드를 제공합니다.", "url": "https://5socialanalyzer-peczsbixd46ewvvilrchfg.streamlit.app/"},
     {"name": "Creative Risk Auditor",  "emoji": "⚠️",  "color": "#EF4444", "desc": "Agent가 마케팅/광고에 사용될 소재의 정치/사회/문화/환경 측면 리스크를 진단합니다.", "url": "https://6creativeriskauditor-x9rtbb4ysbzednb3oc7pjs.streamlit.app/"},
     {"name": "Key Visual Editor","emoji":"📸",  "color": "#2563EB", "desc": "Agent가 제품 Key Visual 이미지를 마케팅/광고 목적에 맞게 수정/변경합니다.","url": "https://7appuctkvgenerator-ytyxho7ywsmfdi93erhifr.streamlit.app/"},
-    # ▼ 여기서 8번과 10번을 스위칭(8번=AI Copywriter, 10번=Market Researcher)
     {"name": "AI Copywriter", "emoji":"🪄", "color": "#6366F1", "desc": "Agent가 다양한 마케팅 목적별 카피라이팅 업무를 대행합니다.", "url": "https://9aicopywriter-ep59xexvnabdh2xxqweq5m.streamlit.app/"},
     {"name": "YouTube Analyzer","emoji":"🎞️", "color": "#F43F5E", "desc": "Agent가 자/타사 YouTube 채널의 커뮤니케이션 방향성과 퍼포먼스를 분석합니다.", "url": "https://yt-research-dashboard.vercel.app/"},
     {"name": "Market Researcher","emoji":"🌏", "color": "#22C55E", "desc": "Agent가 국내/외 다양한 카테고리의 시장조사를 수행합니다.", "url": "https://market-research-service-644231591371.asia-northeast3.run.app/"},
@@ -77,9 +76,9 @@ st.markdown('<p class="hero-sub">Your AI Marketing Stack — 마케터의 하루
 st.markdown('<div style="height: 12px;"></div>', unsafe_allow_html=True)
 
 def render_agent_card(agent: dict, idx: int):
-    # 1-index 기준: 8, 11, 12만 개발중(회색). 9, 10은 운영중(흰색 + 🟢 Available).
+    # 1-index 기준: 10, 11, 12만 개발중(회색). 8, 9는 운영중(흰색 + 🟢 Available).
     one_based = idx + 1
-    pending_ids = {8, 11, 12}
+    pending_ids = {10, 11, 12}  # ← 여기만 수정
     pending = one_based in pending_ids
 
     card_bg = "rgba(243,244,246,1)" if pending else CARD_BG  # gray-100 or white
