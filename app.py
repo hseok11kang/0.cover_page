@@ -58,7 +58,7 @@ st.markdown(
 
 AGENTS = [
 
-    {"name": "Market Researcher \n(for marketing)","emoji":"🌏", "color": "#22C55E", "desc": "Agent가 국내/외 다양한 카테고리의 시장조사를 수행합니다.", "url": "https://8marketresearcher-h64keqk7dwat3ybcgmyghu.streamlit.app/"},
+    {"name": "Market Researcher","emoji":"🌏", "color": "#22C55E", "desc": "Agent가 국내/외 다양한 카테고리의 시장조사를 수행합니다.", "url": "https://8marketresearcher-h64keqk7dwat3ybcgmyghu.streamlit.app/"},
     
     {"name": "Product USP Analyzer",  "emoji": "⚡", "color": "#0EA5E9", "desc": "Agent가 제품의 PDP를 인식하여 Unique Selling Point를 도출하고 비교해줍니다.", "url": "https://1uspanalyzer-l5ft4zd63p7prwxz2csy9k.streamlit.app/"},
     
@@ -120,3 +120,4 @@ for _ in range(rows):
         i += 1
 
 st.markdown("<div style='opacity:.55; font-size:12.5px; margin-top:.6rem;'>© 2025 디마 Agents · All Agents Portal</div>", unsafe_allow_html=True)
+
