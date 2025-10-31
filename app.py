@@ -58,7 +58,7 @@ st.markdown(
 
 AGENTS = [
 
-    {"name": "Market Researcher (for marketing)","emoji":"🌏", "color": "#22C55E", "desc": "Agent가 국내/외 다양한 카테고리의 시장조사를 수행합니다.", "url": "https://8marketresearcher-h64keqk7dwat3ybcgmyghu.streamlit.app/"},
+    {"name": "Market Researcher \n(for marketing)","emoji":"🌏", "color": "#22C55E", "desc": "Agent가 국내/외 다양한 카테고리의 시장조사를 수행합니다.", "url": "https://8marketresearcher-h64keqk7dwat3ybcgmyghu.streamlit.app/"},
     
     {"name": "Product USP Analyzer",  "emoji": "⚡", "color": "#0EA5E9", "desc": "Agent가 제품의 PDP를 인식하여 Unique Selling Point를 도출하고 비교해줍니다.", "url": "https://1uspanalyzer-l5ft4zd63p7prwxz2csy9k.streamlit.app/"},
     
@@ -89,9 +89,9 @@ st.markdown('<p class="hero-sub">Your AI Marketing Stack — 마케터의 하루
 st.markdown('<div style="height: 12px;"></div>', unsafe_allow_html=True)
 
 def render_agent_card(agent: dict, idx: int):
-    # 1-index 기준: 10, 11, 12만 개발중(회색). 8, 9는 운영중(흰색 + 🟢 Available).
+    # 1-index 기준: 11, 12만 개발중(회색). 10번째는 Available(흰색).
     one_based = idx + 1
-    pending_ids = {10, 11, 12}  # ← 여기만 수정
+    pending_ids = {11, 12}  # ← 10 제외하여 흰색 + 🟢 Available 처리
     pending = one_based in pending_ids
 
     card_bg = "rgba(243,244,246,1)" if pending else CARD_BG  # gray-100 or white
@@ -120,4 +120,3 @@ for _ in range(rows):
         i += 1
 
 st.markdown("<div style='opacity:.55; font-size:12.5px; margin-top:.6rem;'>© 2025 디마 Agents · All Agents Portal</div>", unsafe_allow_html=True)
-
