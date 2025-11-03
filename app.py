@@ -58,25 +58,25 @@ st.markdown(
 
 AGENTS = [
 
-    {"name": "Market Researcher","emoji":"🌏", "color": "#22C55E", "desc": "Agent가 국내/외 다양한 카테고리의 시장조사를 수행합니다.", "url": "https://8marketresearcher-h64keqk7dwat3ybcgmyghu.streamlit.app/"},
+    {"name": "Market Researcher","emoji":"🌏", "color": "#22C55E", "desc": "Agent가 국내/외 다양한 카테고리의 시장조사를 폭넓게 수행합니다.", "url": "https://8marketresearcher-h64keqk7dwat3ybcgmyghu.streamlit.app/"},
     
-    {"name": "Product USP Analyzer",  "emoji": "⚡", "color": "#0EA5E9", "desc": "Agent가 제품의 PDP를 인식하여 Unique Selling Point를 도출하고 비교해줍니다.", "url": "https://1uspanalyzer-l5ft4zd63p7prwxz2csy9k.streamlit.app/"},
+    {"name": "Product USP Analyzer",  "emoji": "⚡", "color": "#0EA5E9", "desc": "Agent가 제품의 PDP를 인식하여 제품의 특장점을 도출하고 경쟁 제품과 비교 분석합니다.", "url": "https://1uspanalyzer-l5ft4zd63p7prwxz2csy9k.streamlit.app/"},
     
-    {"name": "Competitors Finder",  "emoji": "🔎", "color": "#F97316", "desc": "Agent가 경쟁 제품을 다각도로 리서치하여 판단, 그 결과를 제시합니다.", "url": "https://2competitorsfinder-nisnoepugznnhhs2znxhk4.streamlit.app/"},
+    {"name": "Competitors Finder",  "emoji": "🔎", "color": "#F97316", "desc": "Agent가 자사 제품 분석을 기반으로 이와 대응되는 주요 경쟁제품을 탐색/발굴합니다.", "url": "https://2competitorsfinder-nisnoepugznnhhs2znxhk4.streamlit.app/"},
     
     {"name": "Social Analyzer",  "emoji": "📊", "color": "#14B8A6", "desc": "Sprinklr 연계를 기반으로 소셜리스닝 및 소셜마케팅 성과분석 대시보드를 제공합니다.", "url": "https://5socialanalyzer-peczsbixd46ewvvilrchfg.streamlit.app/"},
 
     {"name": "YouTube Analyzer","emoji":"🎞️", "color": "#F43F5E", "desc": "Agent가 자/타사 YouTube 채널의 커뮤니케이션 방향성과 퍼포먼스를 분석합니다.", "url": "https://yt-research-dashboard.vercel.app/"},
     
-    {"name": "Social Marcom Ideamaker",  "emoji": "💡", "color": "#8B5CF6", "desc": "Agent가 특정 기간의 로컬 Event를 기반으로 마케팅 방향성을 제안합니다.", "url": "https://4marcomideamaker-vstu5yvn8tkd2xumvrq9nc.streamlit.app/"},
+    {"name": "Social Marcom Ideamaker",  "emoji": "💡", "color": "#8B5CF6", "desc": "Agent가 특정 기간 내 로컬 Event를 기반으로 마케팅 방향성을 제안합니다.", "url": "https://4marcomideamaker-vstu5yvn8tkd2xumvrq9nc.streamlit.app/"},
           
-    {"name": "AI Copywriter", "emoji":"🪄", "color": "#6366F1", "desc": "Agent가 다양한 마케팅 목적별 카피라이팅 업무를 대행합니다.", "url": "https://9aicopywriter-ep59xexvnabdh2xxqweq5m.streamlit.app/"},
+    {"name": "AI Copywriter", "emoji":"🪄", "color": "#6366F1", "desc": "Agent가 다양한 마케팅/광고 목적별 카피라이팅 업무를 대행합니다.", "url": "https://9aicopywriter-ep59xexvnabdh2xxqweq5m.streamlit.app/"},
 
-    {"name": "Key Visual Editor","emoji":"📸",  "color": "#2563EB", "desc": "Agent가 제품 Key Visual 이미지를 마케팅/광고 목적에 맞게 수정/변경합니다.","url": "https://7appuctkvgenerator-ytyxho7ywsmfdi93erhifr.streamlit.app/"},    
+    {"name": "Key Visual Editor","emoji":"📸",  "color": "#2563EB", "desc": "Agent가 제품 Key Visual 이미지를 마케팅/광고 목적에 맞게 조정/수정합니다.","url": "https://7appuctkvgenerator-ytyxho7ywsmfdi93erhifr.streamlit.app/"},    
        
-    {"name": "Creative Risk Auditor",  "emoji": "⚠️",  "color": "#EF4444", "desc": "Agent가 마케팅/광고에 사용될 소재의 정치/사회/문화/환경 측면 리스크를 진단합니다.", "url": "https://6creativeriskauditor-x9rtbb4ysbzednb3oc7pjs.streamlit.app/"},
+    {"name": "Creative Risk Auditor",  "emoji": "⚠️",  "color": "#EF4444", "desc": "Agent가 마케팅/광고 소재(Creatives)의 정치/사회/문화/환경 측면 리스크를 진단하고 수정 방향성을 제안합니다.", "url": "https://6creativeriskauditor-x9rtbb4ysbzednb3oc7pjs.streamlit.app/"},
     
-    {"name": "Brand Fit Auditor",  "emoji": "🧭", "color": "#10B981", "desc": "Agent가 마케팅 소재와 Brand의 적합성 여부를 판단하여 평가 및 수정사항을 제안합니다.", "url": "https://3brandfitauditor-kggk6gexhuxsaqdppnfzfi.streamlit.app/"},
+    {"name": "Brand Fit Auditor",  "emoji": "🧭", "color": "#10B981", "desc": "Agent가 마케팅/광고 소재(Creatives)와 Brand의 이미지 및 정체성과의 정합성 여부를 검수하여 커뮤니케이션 일관성을 확보합니다.", "url": "https://3brandfitauditor-kggk6gexhuxsaqdppnfzfi.streamlit.app/"},
 
     {"name": "Agent11",  "color": "#0EA5E9", "desc": "준비중입니다.", "url": "#"},
     
@@ -120,4 +120,3 @@ for _ in range(rows):
         i += 1
 
 st.markdown("<div style='opacity:.55; font-size:12.5px; margin-top:.6rem;'>© 2025 디마 Agents · All Agents Portal</div>", unsafe_allow_html=True)
-
